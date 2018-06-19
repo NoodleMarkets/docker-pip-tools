@@ -2,7 +2,7 @@ FROM python:3.6.1-alpine
 MAINTAINER Michael Twomey <mick@twomeylee.name>
 
 COPY requirements.txt /requirements.txt
-RUN pip install -U setuptools pip wheel \
+RUN pip install -U setuptools pip wheel libpq-dev python-dev \
     && pip install -r /requirements.txt
 
 WORKDIR /src
