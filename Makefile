@@ -15,4 +15,4 @@ requirements:
 
 .PHONY: build
 build:
-	docker build --rm -t pip-tools .
+	docker build --rm -t bhomnick/pip-tools --build-arg SSH_KEY="$$(cat ../nm_dev)" .
